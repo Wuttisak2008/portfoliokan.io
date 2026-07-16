@@ -1,4 +1,6 @@
-/* ========= Google Font ========= */
+/* ===========================
+   Portfolio Theme - Sky Blue
+=========================== */
 
 *{
     margin:0;
@@ -8,332 +10,241 @@
     scroll-behavior:smooth;
 }
 
-/* ========= Body ========= */
-
-body{
-
-    background:linear-gradient(135deg,#EAF8FF,#D8F3FF,#C2ECFF);
-
-    color:#234;
-
+:root{
+    --primary:#00A8E8;
+    --secondary:#48CAE4;
+    --light:#EAF8FF;
+    --white:#FFFFFF;
+    --text:#2C3E50;
 }
 
-/* ========= Header ========= */
+body{
+    background:linear-gradient(135deg,#F8FDFF,#EAF8FF,#D6F3FF);
+    color:var(--text);
+}
+
+/* ===== Header ===== */
 
 header{
-
     position:fixed;
-
-    width:100%;
-
     top:0;
-
     left:0;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
+    width:100%;
     padding:18px 8%;
-
-    background:rgba(255,255,255,.55);
-
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,.85);
     backdrop-filter:blur(15px);
-
-    border-bottom:1px solid rgba(255,255,255,.7);
-
-    z-index:1000;
-
+    border-bottom:2px solid #BEEBFF;
+    z-index:999;
 }
 
 .logo{
-
     font-size:30px;
-
-    font-weight:bold;
-
-    color:#25A9FF;
-
+    font-weight:700;
+    color:var(--primary);
 }
 
 nav a{
-
     text-decoration:none;
-
-    margin-left:30px;
-
-    color:#444;
-
+    color:var(--text);
+    margin-left:28px;
     transition:.3s;
-
 }
 
 nav a:hover{
-
-    color:#25A9FF;
-
+    color:var(--primary);
 }
 
-/* ========= Hero ========= */
+/* ===== Hero ===== */
 
 .hero{
-
     min-height:100vh;
-
     display:flex;
-
-    justify-content:space-around;
-
+    justify-content:space-between;
     align-items:center;
-
     padding:120px 8%;
-
     flex-wrap:wrap;
-
 }
 
 .hero-text{
-
-    max-width:550px;
-
+    max-width:520px;
 }
 
 .hero-text h1{
-
     font-size:58px;
-
-    color:#25A9FF;
-
+    color:var(--primary);
 }
 
-.hero-text h3{
-
-    margin:20px 0;
-
-    font-weight:500;
-
+.hero-text h2{
+    margin:15px 0;
+    color:#555;
 }
 
 .hero-text p{
-
-    color:#666;
-
     line-height:1.8;
-
+    color:#666;
 }
 
-/* ========= Button ========= */
+.hero-image img{
+    width:320px;
+    height:420px;
+    object-fit:cover;
+    border-radius:20px;
+    border:8px solid white;
+    box-shadow:0 20px 40px rgba(0,168,232,.2);
+}
+
+/* ===== Button ===== */
 
 .btn{
-
     display:inline-block;
-
     margin-top:30px;
-
-    padding:14px 40px;
-
-    border-radius:50px;
-
-    background:#25A9FF;
-
+    padding:15px 35px;
+    background:var(--primary);
     color:white;
-
+    border-radius:35px;
     text-decoration:none;
-
     transition:.3s;
-
 }
 
 .btn:hover{
-
+    background:#0097D8;
     transform:translateY(-5px);
-
-    box-shadow:0 10px 30px rgba(37,169,255,.35);
-
+    box-shadow:0 10px 25px rgba(0,168,232,.3);
 }
 
-/* ========= Hero Image ========= */
-
-.hero-image img{
-
-    width:320px;
-
-    height:420px;
-
-    object-fit:cover;
-
-    border-radius:25px;
-
-    border:8px solid white;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.12);
-
-}
-
-/* ========= Title ========= */
-
-h2{
-
-    text-align:center;
-
-    margin-bottom:35px;
-
-    color:#25A9FF;
-
-    font-size:40px;
-
-}
-
-/* ========= Section ========= */
+/* ===== Section ===== */
 
 section{
-
     padding:90px 8%;
-
 }
 
-/* ========= Glass Box ========= */
+.title{
+    text-align:center;
+    font-size:38px;
+    color:var(--primary);
+    margin-bottom:35px;
+}
 
-.box{
+/* ===== Glass Box ===== */
 
+.glass{
     max-width:900px;
-
     margin:auto;
-
-    background:rgba(255,255,255,.45);
-
+    background:rgba(255,255,255,.75);
     backdrop-filter:blur(15px);
-
     border-radius:25px;
-
-    padding:40px;
-
-    box-shadow:0 10px 35px rgba(0,0,0,.08);
-
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,168,232,.12);
 }
 
-.box p{
-
-    margin:18px 0;
-
+.glass p{
+    margin:15px 0;
     font-size:18px;
-
 }
 
-/* ========= Gallery ========= */
+/* ===== Portfolio ===== */
 
 .gallery{
-
     display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-    gap:28px;
-
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
-/* ========= Card ========= */
-
 .card{
-
     background:white;
-
-    border-radius:25px;
-
+    border-radius:20px;
     overflow:hidden;
-
-    transition:.35s;
-
+    cursor:pointer;
+    transition:.3s;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
-
 }
 
 .card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 20px 40px rgba(37,169,255,.25);
-
+    transform:translateY(-8px);
+    box-shadow:0 20px 35px rgba(0,168,232,.25);
 }
 
 .card img{
-
     width:100%;
-
-    height:330px;
-
+    height:340px;
     object-fit:cover;
-
 }
 
 .card p{
-
-    padding:18px;
-
+    padding:15px;
     text-align:center;
-
     font-weight:600;
-
 }
 
-/* ========= Footer ========= */
+/* ===== Popup ===== */
+
+#popup{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+#popup img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:15px;
+}
+
+#popup span{
+    position:absolute;
+    top:20px;
+    right:40px;
+    color:white;
+    font-size:60px;
+    cursor:pointer;
+}
+
+/* ===== Footer ===== */
 
 footer{
-
     background:white;
-
     text-align:center;
-
-    padding:30px;
-
+    padding:25px;
     color:#666;
-
+    border-top:2px solid #BEEBFF;
 }
 
-/* ========= Responsive ========= */
+/* ===== Responsive ===== */
 
-@media(max-width:768px){
-
-header{
-
-    flex-direction:column;
-
-}
-
-nav{
-
-    margin-top:15px;
-
-}
-
-nav a{
-
-    margin:0 12px;
-
-}
+@media(max-width:900px){
 
 .hero{
-
+    flex-direction:column-reverse;
     text-align:center;
-
 }
 
 .hero-image img{
-
-    margin-top:40px;
-
-    width:250px;
-
-    height:330px;
-
+    margin-bottom:40px;
+    width:260px;
+    height:340px;
 }
 
 .hero-text h1{
+    font-size:42px;
+}
 
-    font-size:40px;
+header{
+    flex-direction:column;
+}
 
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    margin:0 10px;
 }
 
 }
