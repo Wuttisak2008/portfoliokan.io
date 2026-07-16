@@ -1,128 +1,116 @@
-// ==============================
-// Portfolio Sky Blue Theme
-// ==============================
+// ==========================
+// Portfolio Script
+// ==========================
 
-// ---------- เปิดรูป ----------
-function openImage(src){
-
-    let popup=document.getElementById("popup");
-    let popupImg=document.getElementById("popup-img");
-
-    popup.style.display="flex";
-    popupImg.src=src;
-
+// เปิดรูป
+function openImage(src) {
+    document.getElementById("popup").style.display = "flex";
+    document.getElementById("popup-img").src = src;
 }
 
-// ---------- ปิดรูป ----------
-function closeImage(){
-
-    document.getElementById("popup").style.display="none";
-
+// ปิดรูป
+function closeImage() {
+    document.getElementById("popup").style.display = "none";
 }
 
-// ---------- กด ESC ----------
-document.addEventListener("keydown",(e)=>{
-
-    if(e.key==="Escape"){
-
+// กด ESC เพื่อปิด
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
         closeImage();
-
     }
-
 });
 
-// ---------- คลิกพื้นหลังปิด ----------
-const popup=document.getElementById("popup");
+// คลิกพื้นหลังเพื่อปิด
+const popup = document.getElementById("popup");
 
-if(popup){
-
-popup.addEventListener("click",(e)=>{
-
-    if(e.target.id==="popup"){
-
-        closeImage();
-
-    }
-
-});
-
+if (popup) {
+    popup.addEventListener("click", function (e) {
+        if (e.target.id === "popup") {
+            closeImage();
+        }
+    });
 }
 
-// ---------- Animation ----------
-const cards=document.querySelectorAll(".card");
+// ==========================
+// Animation เวลาเลื่อน
+// ==========================
 
-const observer=new IntersectionObserver((entries)=>{
+const cards = document.querySelectorAll(".card");
 
-entries.forEach(entry=>{
+const observer = new IntersectionObserver((entries) => {
 
-if(entry.isIntersecting){
+    entries.forEach(entry => {
 
-entry.target.style.opacity="1";
-entry.target.style.transform="translateY(0)";
+        if (entry.isIntersecting) {
 
-}
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
 
-});
+        }
 
-});
-
-cards.forEach(card=>{
-
-card.style.opacity="0";
-card.style.transform="translateY(60px)";
-card.style.transition=".7s";
-
-observer.observe(card);
+    });
 
 });
 
-// ---------- ปุ่มกลับด้านบน ----------
+cards.forEach(card => {
 
-const topBtn=document.createElement("button");
+    card.style.opacity = "0";
+    card.style.transform = "translateY(50px)";
+    card.style.transition = "0.6s";
 
-topBtn.innerHTML="⬆";
+    observer.observe(card);
 
-topBtn.id="topBtn";
+});
+
+// ==========================
+// ปุ่มกลับด้านบน
+// ==========================
+
+const topBtn = document.createElement("button");
+
+topBtn.innerHTML = "↑";
+
+topBtn.id = "topBtn";
 
 document.body.appendChild(topBtn);
 
-topBtn.style.position="fixed";
-topBtn.style.right="25px";
-topBtn.style.bottom="25px";
-topBtn.style.width="55px";
-topBtn.style.height="55px";
-topBtn.style.borderRadius="50%";
-topBtn.style.border="none";
-topBtn.style.background="#25A9FF";
-topBtn.style.color="white";
-topBtn.style.fontSize="22px";
-topBtn.style.cursor="pointer";
-topBtn.style.display="none";
-topBtn.style.boxShadow="0 10px 25px rgba(0,0,0,.2)";
-topBtn.style.transition=".3s";
+topBtn.style.position = "fixed";
+topBtn.style.bottom = "30px";
+topBtn.style.right = "30px";
+topBtn.style.width = "55px";
+topBtn.style.height = "55px";
+topBtn.style.border = "none";
+topBtn.style.borderRadius = "50%";
+topBtn.style.background = "#00A8E8";
+topBtn.style.color = "white";
+topBtn.style.fontSize = "24px";
+topBtn.style.cursor = "pointer";
+topBtn.style.display = "none";
+topBtn.style.boxShadow = "0 8px 20px rgba(0,168,232,.35)";
+topBtn.style.transition = ".3s";
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-if(window.scrollY>300){
+    if (window.scrollY > 300) {
 
-topBtn.style.display="block";
+        topBtn.style.display = "block";
 
-}else{
+    } else {
 
-topBtn.style.display="none";
+        topBtn.style.display = "none";
 
-}
-
-});
-
-topBtn.onclick=()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
+    }
 
 });
 
-};
+topBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
