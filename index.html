@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChaiPhu WUTTISAK - WSK Portfolio 2026</title>
+    <title>Neo-Brutalist Premium Portfolio - #B2C9CA</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800;900&display=swap" rel="stylesheet">
 
-    <!-- FontAwesome สำหรับ Icons โซเชียลและเมนู -->
+    <!-- FontAwesome สำหรับ Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -22,7 +22,7 @@
             font-family: 'Kanit', sans-serif;
         }
 
-        /* 🏎️ แถบตัวอักษรวิ่งสไตล์ Street Tech (Marquee Animation) */
+        /* 🏎️ CSS สำหรับแถบตัวอักษรวิ่งสุดเฟี้ยว (Marquee Animation) */
         @keyframes marquee {
             0% { transform: translateX(0%); }
             100% { transform: translateX(-50%); }
@@ -30,83 +30,86 @@
         .animate-marquee {
             display: flex;
             width: max-content;
-            animation: marquee 20s linear infinite;
+            animation: marquee 25s linear infinite;
         }
 
-        /* ซ่อน Scrollbar ของ Loader */
-        .no-scroll {
-            overflow: hidden;
+        /* ปรับ Scrollbar เป็นสไตล์บล็อกเหลี่ยมหนาๆ เข้ากับธีม */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1E293B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FFFDF9;
+            border: 3px solid #1E293B;
         }
     </style>
 </head>
 
-<!-- 🎨 THEME: พื้นหลัง #B2C9CA ผสมผสานดีไซน์บล็อกขอบหนา (Neo-Brutalism) ดิบ เท่ ไม่ซ้ำใคร -->
-<body class="bg-[#B2C9CA] text-slate-950 min-h-screen antialiased selection:bg-slate-950 selection:text-white overflow-x-hidden no-scroll">
+<!-- 🎨 NEO-BRUTALISM THEME: ใช้สี #B2C9CA เป็นพื้นหลังหลัก ตัดด้วยไอเทมขอบหนาเงาเข้ม -->
+<body class="bg-[#B2C9CA] text-slate-900 min-h-screen antialiased selection:bg-slate-900 selection:text-white overflow-x-hidden">
 
-    <!-- ================= ⏳ LOADER WINDOW (หน้าโหลดเว็บแบบมีลูกเล่นแอนิเมชันบล็อก) ================= -->
-    <div id="loader" class="fixed inset-0 bg-[#FFFDF9] z-[200] flex flex-col items-center justify-center p-6 transition-all duration-500">
-        <div class="bg-slate-950 text-[#B2C9CA] border-[4px] border-slate-950 font-black text-2xl md:text-4xl px-8 py-4 rounded-2xl shadow-[8px_8px_0px_0px_#B2C9CA] mb-4 animate-bounce">
-            ChaiPhu WUTTISAK
-        </div>
-        <p class="font-bold text-slate-700 tracking-widest uppercase flex items-center gap-2 text-sm">
-            <i class="fa-solid fa-spinner animate-spin text-[#385A5C]"></i> Loading Portfolio 2026...
-        </p>
-    </div>
-
-
-    <!-- ================= NAVIGATION (เมนูกล่องลอยขอบหนาเหลี่ยมคม) ================= -->
+    <!-- ================= STICKY BAR MENU (เมนูกล่องหนา สไตล์กล่องเครื่องมือ) ================= -->
     <div class="fixed top-4 left-0 w-full px-4 z-50 pointer-events-none">
         <header class="max-w-5xl mx-auto bg-[#FFFDF9] border-[3px] border-slate-950 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] rounded-2xl px-6 py-3 flex justify-between items-center pointer-events-auto">
-            <div class="text-base md:text-lg font-black tracking-tight text-slate-950 flex items-center gap-2">
-                <span class="bg-slate-950 text-[#FFFDF9] px-2 py-0.5 rounded-lg text-xs font-bold">WSK</span>
-                ChaiPhu Wuttisak
+            <div class="text-lg font-black tracking-tighter flex items-center gap-2">
+                <span class="bg-slate-950 text-white px-2.5 py-0.5 rounded-lg text-sm">PRO</span>
+                MY PORTFOLIO.
             </div>
-            <nav class="hidden md:flex space-x-6 font-bold text-xs uppercase tracking-wider">
-                <a href="#home" class="hover:underline underline-offset-4 decoration-[3px] decoration-[#385A5C]">Home</a>
-                <a href="#about" class="hover:underline underline-offset-4 decoration-[3px] decoration-[#385A5C]">About</a>
-                <a href="#skill" class="hover:underline underline-offset-4 decoration-[3px] decoration-[#385A5C]">Skill</a>
-                <a href="#project" class="hover:underline underline-offset-4 decoration-[3px] decoration-[#385A5C]">Project</a>
-                <a href="#contact" class="hover:underline underline-offset-4 decoration-[3px] decoration-[#385A5C]">Contact</a>
+            <nav class="hidden md:flex space-x-6 font-bold text-sm uppercase">
+                <a href="#home" class="hover:underline underline-offset-4 decoration-2">HOME</a>
+                <a href="#about" class="hover:underline underline-offset-4 decoration-2">BIO & EDU</a>
+                <a href="#portfolio" class="hover:underline underline-offset-4 decoration-2">WORK SAMPLES</a>
+                <a href="#contact" class="hover:underline underline-offset-4 decoration-2">TALK TO ME</a>
             </nav>
-            <div class="md:hidden text-slate-950 text-lg">
-                <i class="fa-solid fa-bars-staggered"></i>
+            <div class="md:hidden text-xl cursor-pointer">
+                <i class="fa-solid fa-burst"></i>
             </div>
         </header>
     </div>
 
 
-    <!-- ================= HERO SECTION (หน้าแรก - ดีไซน์โปสเตอร์เหลื่อมสตรีท) ================= -->
+    <!-- ================= HERO SECTION (หน้าแรก - ดีไซน์โปสเตอร์สตรีท แผ่นป้ายเหลื่อม) ================= -->
     <section class="min-h-screen flex items-center justify-center pt-28 pb-16 px-4" id="home">
         <div class="max-w-5xl w-full grid md:grid-cols-12 gap-8 items-center">
             
+            <!-- ฝั่งข้อความตัวเบ้งๆ ชนขอบ -->
             <div class="md:col-span-7 space-y-6 text-center md:text-left order-2 md:order-1">
-                <div class="inline-block bg-amber-300 border-[3px] border-slate-950 font-black text-xs px-4 py-1.5 rounded-md transform -rotate-1 shadow-[3px_3px_0px_0px_rgba(15,23,42,1)]">
-                    ⚡ PORTFOLIO 2026
+                <div class="inline-block bg-amber-300 border-[3px] border-slate-950 font-black text-xs px-4 py-1.5 rounded-md transform -rotate-1 shadow-[2px_2px_0px_0px_rgba(15,23,42,1)]">
+                    🚀 WELCOME TO MY CREATIVE ZONE
                 </div>
-                <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-none text-slate-950 uppercase">
-                    นายวุฒิศักดิ์ สวัสดี
+                
+                <!-- ✏️ แก้ไขชื่อตัวโตๆ ตรงนี้ -->
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-none uppercase text-slate-950">
+                    I'M <span class="bg-white px-2 border-[3px] border-slate-950 inline-block shadow-[5px_5px_0px_0px_rgba(15,23,42,1)] my-1 transform rotate-1">[ชื่อของคุณ]</span>
                 </h1>
-                <h2 class="text-xl md:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-slate-950 to-slate-700 tracking-wide bg-white border-2 border-slate-950 px-3 py-1 inline-block rounded-lg shadow-[3px_3px_0px_0px_rgba(15,23,42,1)]">
-                    Information Technology
-                </h2>
-                <p class="text-base md:text-lg text-slate-900 max-w-lg font-medium leading-relaxed bg-[#FFFDF9]/60 p-4 rounded-xl border-2 border-slate-950">
-                    นักเรียนผู้สนใจด้านเทคโนโลยีสารสนเทศ มีความมุ่งมั่นและหลงใหลในเทคโนโลยีระดับสูงอย่าง <span class="underline decoration-wavy decoration-rose-500 font-bold">AI</span>, <span class="underline decoration-wavy decoration-sky-500 font-bold">IoT</span>, <span class="underline decoration-wavy decoration-emerald-500 font-bold">Programming</span> และ <span class="underline decoration-wavy decoration-amber-500 font-bold">Robotics</span>
+                
+                <p class="text-xl md:text-2xl font-semibold text-slate-800 pt-2">
+                    นี่คือพื้นที่รวบรวมตัวตน ทักษะ และผลงานระดับมาสเตอร์พีซ
                 </p>
-                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
-                    <a href="#project" class="bg-slate-950 text-[#FFFDF9] font-bold px-6 py-3.5 rounded-xl border-[3px] border-slate-950 shadow-[4px_4px_0px_0px_#FFFDF9] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_#FFFDF9] transition-all">
-                        My Project <i class="fa-solid fa-arrow-right-long ml-2 text-xs"></i>
-                    </a>
-                    <a href="#contact" class="bg-white text-slate-950 font-bold px-6 py-3.5 rounded-xl border-[3px] border-slate-950 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] transition-all">
-                        Contact Me
+                <p class="text-base text-slate-700 max-w-lg font-normal leading-relaxed">
+                    แฟ้มสะสมผลงานรูปแบบใหม่ ฉีกทุกกฎเกณฑ์เดิมๆ ดีไซน์เพื่อสะท้อนความสร้างสรรค์ที่ไร้ขีดจำกัด มุ่งสู่เป้าหมายในระดับอุดมศึกษา
+                </p>
+                
+                <div class="pt-4">
+                    <a href="#portfolio" class="inline-flex items-center gap-3 bg-slate-950 text-white font-bold text-lg px-8 py-4 rounded-xl border-[3px] border-slate-950 shadow-[6px_6px_0px_0px_#FFFDF9] hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0px_0px_#FFFDF9] transition-all duration-200">
+                        EXPLORE WORKS <i class="fa-solid fa-arrow-right-long"></i>
                     </a>
                 </div>
             </div>
 
+            <!-- ฝั่งรูปภาพแบบกรอบซ้อนเอียงล้ำๆ -->
             <div class="md:col-span-5 flex justify-center order-1 md:order-2">
-                <div class="relative group">
-                    <div class="absolute inset-0 bg-rose-400 border-[3px] border-slate-950 rounded-[2.5rem] transform translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
-                    <div class="relative w-64 h-64 md:w-72 md:h-72 bg-[#FFFDF9] border-[3px] border-slate-950 p-4 rounded-[2.5rem] shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
-                        <img src="images/1.jpg" alt="Profile" class="w-full h-full object-cover rounded-[1.8rem] border-2 border-slate-950 bg-slate-200" onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=400'">
+                <div class="relative">
+                    <!-- กรอบเงาด้านหลัง -->
+                    <div class="absolute inset-0 bg-rose-400 border-[3px] border-slate-950 rounded-[2rem] transform translate-x-4 translate-y-4"></div>
+                    <!-- กล่องรูปหลัก -->
+                    <div class="relative w-72 h-[24rem] md:w-80 md:h-[26rem] bg-[#FFFDF9] border-[3px] border-slate-950 p-4 rounded-[2rem] shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
+                        <div class="w-full h-full bg-slate-200 rounded-[1.4rem] overflow-hidden border-2 border-slate-950">
+                            <!-- 📸 รูปโปรไฟล์หลักของคุณ -->
+                            <img src="images/profile.jpg" alt="Profile" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=500'">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,128 +118,110 @@
     </section>
 
 
-    <!-- ================= 🏎️ BANNER MARQUEE RUNNING TEXT (แถบวิ่งแนวสตรีทเทค) ================= -->
-    <div class="w-full bg-slate-950 text-[#FFFDF9] border-y-[3px] border-slate-950 py-3 overflow-hidden flex transform -rotate-1 z-10 relative shadow-md">
-        <div class="animate-marquee font-black text-xs md:text-sm tracking-widest uppercase flex items-center gap-12 whitespace-nowrap">
-            <span>✦ ARTIFICIAL INTELLIGENCE</span> <span>✦ INTERNET OF THINGS (IoT)</span> <span>✦ ROBOTICS & CODING SYSTEM</span> <span>✦ BULLETPROOF TECH PORTFOLIO</span>
-            <span>✦ ARTIFICIAL INTELLIGENCE</span> <span>✦ INTERNET OF THINGS (IoT)</span> <span>✦ ROBOTICS & CODING SYSTEM</span> <span>✦ BULLETPROOF TECH PORTFOLIO</span>
+    <!-- ================= 🏎️ BANNER RUNNING TEXT (แถบอักษรวิ่งตัดหน้าจอสุดแนว) ================= -->
+    <div class="w-full bg-slate-950 text-[#FFFDF9] border-y-[4px] border-slate-950 py-3 overflow-hidden flex transform -rotate-1 z-20 relative">
+        <div class="animate-marquee font-black text-xl tracking-widest uppercase flex items-center gap-8 whitespace-nowrap">
+            <span>✦ MY INSIGHTS & EXPERIENCES</span> <span>✦ DESIGN THE FUTURE</span> <span>✦ SHOWCASE 2026</span> <span>✦ NEVER STOP CREATING</span>
+            <span>✦ MY INSIGHTS & EXPERIENCES</span> <span>✦ DESIGN THE FUTURE</span> <span>✦ SHOWCASE 2026</span> <span>✦ NEVER STOP CREATING</span>
         </div>
     </div>
 
 
-    <!-- ================= ABOUT ME SECTION (ดีไซน์กล่อง Bento Box สไตล์ญี่ปุ่น) ================= -->
+    <!-- ================= BENTO GRID SECTION (รวมประวัติ + การศึกษา สไตล์บล็อกกล่องสี่เหลี่ยมไม่เท่ากัน) ================= -->
     <section class="py-24 px-4 max-w-5xl mx-auto" id="about">
         <div class="mb-12 text-center md:text-left">
-            <h2 class="text-3xl md:text-4xl font-black tracking-tight text-slate-950 uppercase inline-block bg-white border-[3px] border-slate-950 px-4 py-1 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
-                📌 ABOUT ME
+            <h2 class="text-4xl md:text-5xl font-black tracking-tight text-slate-950 uppercase inline-block bg-white border-[3px] border-slate-950 px-4 py-1 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
+                📟 BIO & EDUCATION
             </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-            
-            <!-- การ์ดฝั่งซ้าย: รูปภาพประกอบประวัติ -->
-            <div class="md:col-span-4 bg-emerald-200 border-[3px] border-slate-950 p-6 rounded-3xl shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] flex items-center justify-center">
-                <div class="w-full aspect-square md:h-full bg-[#FFFDF9] border-2 border-slate-950 rounded-2xl overflow-hidden p-2 shadow-[3px_3px_0px_0px_rgba(15,23,42,1)]">
-                    <img src="images/11.jpg" alt="About Profile" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400'">
-                </div>
-            </div>
-
-            <!-- การ์ดฝั่งขวา: รายละเอียดข้อความ -->
-            <div class="md:col-span-8 bg-[#FFFDF9] border-[3px] border-slate-950 p-6 md:p-8 rounded-3xl shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] flex flex-col justify-between">
-                <div class="space-y-4">
-                    <div class="text-xs font-black uppercase text-indigo-600 tracking-wider">// STUDENT BACKGROUND</div>
-                    <h3 class="text-2xl md:text-3xl font-black text-slate-950">ประวัติส่วนตัว & เป้าหมาย</h3>
-                    
-                    <div class="grid sm:grid-cols-2 gap-3 pt-2">
-                        <div class="bg-slate-100 p-3 rounded-xl border-2 border-slate-950 font-bold text-sm">
-                            <i class="fa-solid fa-user mr-1.5 text-[#385A5C]"></i> ชื่อ: <span class="font-normal block text-slate-700 mt-0.5">นายวุฒิศักดิ์ สวัสดี</span>
-                        </div>
-                        <div class="bg-slate-100 p-3 rounded-xl border-2 border-slate-950 font-bold text-sm">
-                            <i class="fa-solid fa-heart mr-1.5 text-rose-500"></i> ความสนใจ: <span class="font-normal block text-slate-700 mt-0.5">IT / AI / IoT / Coding</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-6 bg-amber-100 p-4 rounded-xl border-2 border-slate-950">
-                    <span class="font-black text-xs bg-amber-300 text-slate-950 border border-slate-950 px-2 py-0.5 rounded-md uppercase tracking-wider block w-max mb-1.5">🎯 TARGET GOAL</span>
-                    <p class="font-bold text-base text-slate-950 leading-relaxed">
-                        ศึกษาต่อระดับอุดมศึกษาด้านเทคโนโลยีสารสนเทศ (Information Technology) เพื่อพัฒนาตนเองสู่การเป็นนักพัฒนานวัตกรรมในอนาคต
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- ================= SKILLS SECTION (บล็อกแผ่นดิสก์ สลับสีจัดจ้าน) ================= -->
-    <section class="py-24 px-4 max-w-5xl mx-auto" id="skill">
-        <div class="mb-12 text-center md:text-left">
-            <h2 class="text-3xl md:text-4xl font-black tracking-tight text-slate-950 uppercase inline-block bg-white border-[3px] border-slate-950 px-4 py-1 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
-                🛠️ TECH SKILLS
-            </h2>
-        </div>
-
+        <!-- 🍱 เริ่มต้นผัง Bento Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            <!-- การ์ดสกิล 1 -->
-            <div class="bg-indigo-100 border-[3px] border-slate-950 p-6 rounded-2xl shadow-[5px_5px_0px_0px_rgba(15,23,42,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_0px_rgba(15,23,42,1)] transition-all">
-                <div class="w-10 h-10 bg-slate-950 text-white rounded-lg flex items-center justify-center text-lg mb-4 border-2 border-slate-950 shadow-[2px_2px_0px_0px_#FFF]"><i class="fa-solid fa-code"></i></div>
-                <h3 class="text-xl font-black text-slate-950 mb-2">Programming</h3>
-                <p class="text-sm font-semibold text-slate-700 leading-relaxed bg-white/60 p-2.5 rounded-lg border border-slate-400">
-                    HTML, CSS, JavaScript, Python
-                </p>
+            <!-- บล็อกใหญ่ 1: ข้อมูลส่วนตัวหลัก -->
+            <div class="md:col-span-2 bg-[#FFFDF9] border-[3px] border-slate-950 p-6 rounded-2xl shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] flex flex-col justify-between">
+                <div>
+                    <div class="text-xs font-black uppercase text-rose-500 mb-2">// IDENTITY PROFILE</div>
+                    <h3 class="text-3xl font-black text-slate-950 mb-6">ข้อมูลส่วนตัว</h3>
+                    <div class="grid sm:grid-cols-2 gap-4 text-base font-semibold">
+                        <div class="bg-slate-100 p-3 rounded-xl border-2 border-slate-950">NAME: <span class="font-normal block text-slate-700">__________________</span></div>
+                        <div class="bg-slate-100 p-3 rounded-xl border-2 border-slate-950">SCHOOL: <span class="font-normal block text-slate-700">__________________</span></div>
+                        <div class="bg-slate-100 p-3 rounded-xl border-2 border-slate-950">PROGRAM: <span class="font-normal block text-slate-700">__________________</span></div>
+                        <div class="bg-slate-100 p-3 rounded-xl border-2 border-slate-950">TALENT: <span class="font-normal block text-slate-700">__________________</span></div>
+                    </div>
+                </div>
+                <div class="mt-6 bg-amber-100 p-4 rounded-xl border-2 border-slate-950">
+                    <span class="font-black text-sm block text-slate-950">🎯 GOAL / เป้าหมายสูงสุด:</span>
+                    <p class="font-medium text-slate-700 mt-1">____________________________________________________________</p>
+                </div>
             </div>
 
-            <!-- การ์ดสกิล 2 -->
-            <div class="bg-orange-100 border-[3px] border-slate-950 p-6 rounded-2xl shadow-[5px_5px_0px_0px_rgba(15,23,42,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_0px_rgba(15,23,42,1)] transition-all transform md:rotate-1">
-                <div class="w-10 h-10 bg-slate-950 text-white rounded-lg flex items-center justify-center text-lg mb-4 border-2 border-slate-950 shadow-[2px_2px_0px_0px_#FFF]"><i class="fa-solid fa-microchip"></i></div>
-                <h3 class="text-xl font-black text-slate-950 mb-2">IoT & Hardware</h3>
-                <p class="text-sm font-semibold text-slate-700 leading-relaxed bg-white/60 p-2.5 rounded-lg border border-slate-400">
-                    Arduino, ESP8266, AI Integration
-                </p>
+            <!-- บล็อกย่อย 2: จุดเด่น/คติประจำใจ (สไตล์การ์ดสีตัด) -->
+            <div class="bg-indigo-200 border-[3px] border-slate-950 p-6 rounded-2xl shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] flex flex-col justify-between transform md:rotate-1">
+                <div class="w-12 h-12 bg-slate-950 text-white rounded-xl flex items-center justify-center text-2xl mb-4 border-2 border-slate-950 shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-black text-slate-950 leading-tight mb-2">"คิดนอกกรอบ ทำในสิ่งที่แตกต่าง"</h4>
+                    <p class="text-sm font-medium text-slate-700">พร้อมเปิดรับสิ่งใหม่ๆ และแก้ปัญหาด้วยนวัตกรรมความคิดสร้างสรรค์</p>
+                </div>
             </div>
 
-            <!-- การ์ดสกิล 3 -->
-            <div class="bg-teal-100 border-[3px] border-slate-950 p-6 rounded-2xl shadow-[5px_5px_0px_0px_rgba(15,23,42,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[7px_7px_0px_0px_rgba(15,23,42,1)] transition-all">
-                <div class="w-10 h-10 bg-slate-950 text-white rounded-lg flex items-center justify-center text-lg mb-4 border-2 border-slate-950 shadow-[2px_2px_0px_0px_#FFF]"><i class="fa-solid fa-compass-drafting"></i></div>
-                <h3 class="text-xl font-black text-slate-950 mb-2">Design</h3>
-                <p class="text-sm font-semibold text-slate-700 leading-relaxed bg-white/60 p-2.5 rounded-lg border border-slate-400">
-                    UI UX, Graphic Design Layouts
-                </p>
+            <!-- บล็อกใหญ่ 3: ไทม์ไลน์การศึกษาแบบกล่องชั้นๆ (ยึดพื้นที่ด้านล่าง) -->
+            <div class="md:col-span-3 bg-emerald-100 border-[3px] border-slate-950 p-6 rounded-2xl shadow-[8px_8px_0px_0px_rgba(15,23,42,1)]">
+                <div class="text-xs font-black uppercase text-emerald-700 mb-2">// HISTORY LINES</div>
+                <h3 class="text-3xl font-black text-slate-950 mb-6">ประวัติการศึกษา</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- ประถม -->
+                    <div class="bg-[#FFFDF9] border-2 border-slate-950 p-4 rounded-xl shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
+                        <span class="text-xs font-black bg-slate-950 text-white px-2 py-0.5 rounded">PRIMARY</span>
+                        <h4 class="font-bold text-lg text-slate-950 mt-2">ระดับประถมศึกษา</h4>
+                        <p class="text-sm text-slate-600 mt-1">______________________</p>
+                    </div>
+                    <!-- มัธยมต้น -->
+                    <div class="bg-[#FFFDF9] border-2 border-slate-950 p-4 rounded-xl shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
+                        <span class="text-xs font-black bg-[#385A5C] text-white px-2 py-0.5 rounded">JUNIOR HIGH</span>
+                        <h4 class="font-bold text-lg text-slate-950 mt-2">ระดับมัธยมศึกษาตอนต้น</h4>
+                        <p class="text-sm text-slate-600 mt-1">______________________</p>
+                    </div>
+                    <!-- มัธยมปลาย -->
+                    <div class="bg-[#FFFDF9] border-2 border-slate-950 p-4 rounded-xl shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
+                        <span class="text-xs font-black bg-rose-500 text-white px-2 py-0.5 rounded">SENIOR HIGH</span>
+                        <h4 class="font-bold text-lg text-slate-950 mt-2">ระดับมัธยมศึกษาตอนปลาย</h4>
+                        <p class="text-sm text-slate-600 mt-1">______________________</p>
+                    </div>
+                </div>
             </div>
 
         </div>
     </section>
 
 
-    <!-- ================= PROJECT GALLERY SECTION (แกลเลอรีรูปภาพขอบคมหนา 10 ภาพ) ================= -->
-    <section class="py-24 px-4 max-w-6xl mx-auto" id="project">
+    <!-- ================= PORTFOLIO SECTION (แกลเลอรีรูปภาพ 10 หน้า สไตล์เฟรมโปสเตอร์เอาร์ตๆ) ================= -->
+    <section class="py-24 px-4 max-w-6xl mx-auto" id="portfolio">
         <div class="mb-16 text-center">
-            <h2 class="text-3xl md:text-4xl font-black tracking-tight text-slate-950 uppercase inline-block bg-white border-[3px] border-slate-950 px-5 py-1.5 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
-                📂 MY PROJECT GALLERY
+            <h2 class="text-4xl md:text-5xl font-black tracking-tight text-slate-950 uppercase inline-block bg-white border-[3px] border-slate-950 px-5 py-1.5 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
+                🖼️ PORTFOLIO GALLERY
             </h2>
-            <p class="text-xs font-black text-slate-800 mt-4 bg-amber-300 inline-block border-2 border-slate-950 px-3 py-1 rounded-md uppercase">
-                👉 คลิกที่ภาพเพื่อเปิดดูขนาดใหญ่แบบป๊อปอัป
-            </p>
+            <p class="text-sm font-bold text-slate-800 mt-4 bg-amber-300 inline-block border-2 border-slate-950 px-3 py-0.5 rounded-md">CLICK CARDS TO POP UP FULLSIZE IMAGE</p>
         </div>
 
-        <!-- กริดแสดงรูปภาพผลงานทั้ง 10 รูปแบบจัดแต่งขอบแบบกล่องโปสเตอร์ -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <!-- 🔄 วนลูปการ์ดผลงานดีไซน์ดิบๆ ชิคๆ 10 หน้า -->
             <script>
-                // วนลูปสร้างกล่องรูปภาพโปรเจกต์ 1-10 ตามภาพที่คุณระบุ
                 for (let i = 1; i <= 10; i++) {
                     document.write(`
-                        <div class="group bg-[#FFFDF9] border-[3px] border-slate-950 rounded-2xl overflow-hidden shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:shadow-[7px_7px_0px_0px_rgba(15,23,42,1)] hover:translate-x-[-3px] hover:translate-y-[-3px] transition-all duration-200 cursor-pointer" onclick="openImage('images/${i}.jpg')">
+                        <div class="group bg-[#FFFDF9] border-[3px] border-slate-950 rounded-xl overflow-hidden shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:shadow-[7px_7px_0px_0px_rgba(15,23,42,1)] hover:-translate-x-[3px] hover:-translate-y-[3px] transition-all duration-200 cursor-pointer" onclick="openImage('images/page${i}.jpg')">
                             <div class="aspect-[3/4] bg-slate-900 overflow-hidden relative border-b-2 border-slate-950">
-                                <img src="images/${i}.jpg" alt="Project ${i}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-102" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=400'">
+                                <img src="images/page${i}.jpg" alt="Portfolio หน้า ${i}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-102" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=400'">
                                 <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
-                                    <span class="bg-white border-2 border-slate-950 text-slate-950 text-xs font-black px-3 py-1.5 rounded shadow-[2px_2px_0px_0px_rgba(15,23,42,1)]"><i class="fa-solid fa-maximize mr-1"></i> VIEW FULL</span>
+                                    <span class="bg-white border-2 border-slate-950 text-slate-950 text-xs font-black px-3 py-1.5 rounded shadow-[2px_2px_0px_0px_rgba(15,23,42,1)]"><i class="fa-solid fa-maximize mr-1"></i> VIEW PAGE</span>
                                 </div>
                             </div>
                             <div class="p-3 bg-slate-50 font-bold text-xs flex justify-between items-center text-slate-950">
-                                <span>PROJECT ${i.toString().padStart(2, '0')}</span>
-                                <span class="bg-[#B2C9CA] px-1.5 py-0.5 rounded border border-slate-950 text-[9px] font-black">IT CODE</span>
+                                <span>PAGE ${i.toString().padStart(2, '0')}</span>
+                                <span class="bg-slate-200 px-1.5 py-0.5 rounded border border-slate-400 text-[10px]">PREVIEW</span>
                             </div>
                         </div>
                     `);
@@ -246,41 +231,46 @@
     </section>
 
 
-    <!-- ================= CONTACT SECTION (ช่องทางติดต่อแบบแป้นคีย์บอร์ดเรโทรหนาๆ) ================= -->
+    <!-- ================= CONTACT SECTION (ช่องทางติดต่อแบบปุ่มกดแป้นคีย์บอร์ดหนาๆ) ================= -->
     <section class="py-24 px-4 max-w-4xl mx-auto" id="contact">
         <div class="mb-12 text-center">
-            <h2 class="text-3xl md:text-4xl font-black tracking-tight text-slate-950 uppercase inline-block bg-white border-[3px] border-slate-950 px-4 py-1 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
-                📬 CONNECT CHANNELS
+            <h2 class="text-4xl md:text-5xl font-black tracking-tight text-slate-950 uppercase inline-block bg-white border-[3px] border-slate-950 px-4 py-1 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
+                📬 CONNECT WITH ME
             </h2>
         </div>
 
-        <div class="bg-[#FFFDF9] border-[4px] border-slate-950 rounded-3xl p-6 md:p-10 shadow-[8px_8px_0px_0px_rgba(15,23,42,1)]">
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="bg-amber-100 border-[4px] border-slate-950 rounded-3xl p-6 md:p-10 shadow-[8px_8px_0px_0px_rgba(15,23,42,1)]">
+            <div class="grid sm:grid-cols-2 gap-4">
                 
-                <!-- อีเมล -->
-                <div class="flex flex-col justify-between p-4 bg-rose-100 rounded-xl border-[3px] border-slate-950 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] group">
-                    <div class="w-10 h-10 bg-rose-500 text-white rounded-lg flex items-center justify-center text-xl border-2 border-slate-950 mb-4"><i class="fa-solid fa-envelope"></i></div>
+                <a href="#" class="flex items-center gap-4 p-4 bg-[#FFFDF9] hover:bg-rose-100 rounded-xl border-[3px] border-slate-950 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] transition-all group">
+                    <div class="w-12 h-12 bg-rose-500 text-white rounded-lg flex items-center justify-center text-2xl border-2 border-slate-950"><i class="fa-solid fa-envelope"></i></div>
                     <div>
-                        <p class="text-[10px] font-black text-rose-700 uppercase tracking-wider">EMAIL ADDRESS</p>
-                        <p class="font-bold text-sm text-slate-950 truncate mt-1">example@gmail.com</p>
-                    </div>
-                </div>
-
-                <!-- YouTube -->
-                <a href="https://youtube.com" target="_blank" class="flex flex-col justify-between p-4 bg-red-100 hover:bg-red-200 rounded-xl border-[3px] border-slate-950 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] transition-all group">
-                    <div class="w-10 h-10 bg-red-600 text-white rounded-lg flex items-center justify-center text-xl border-2 border-slate-950 mb-4"><i class="fa-brands fa-youtube"></i></div>
-                    <div>
-                        <p class="text-[10px] font-black text-red-700 uppercase tracking-wider">YOUTUBE CHANNEL</p>
-                        <p class="font-bold text-base text-slate-950 mt-1">CPCN Gaming <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-0.5"></i></p>
+                        <p class="text-xs font-black text-slate-400">EMAIL</p>
+                        <p class="font-bold text-slate-950">______________________</p>
                     </div>
                 </a>
 
-                <!-- Facebook -->
-                <a href="https://facebook.com" target="_blank" class="flex flex-col justify-between p-4 bg-sky-100 hover:bg-sky-200 rounded-xl border-[3px] border-slate-950 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] transition-all group">
-                    <div class="w-10 h-10 bg-sky-600 text-white rounded-lg flex items-center justify-center text-xl border-2 border-slate-950 mb-4"><i class="fa-brands fa-facebook-f"></i></div>
+                <a href="#" class="flex items-center gap-4 p-4 bg-[#FFFDF9] hover:bg-sky-100 rounded-xl border-[3px] border-slate-950 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] transition-all group">
+                    <div class="w-12 h-12 bg-sky-600 text-white rounded-lg flex items-center justify-center text-2xl border-2 border-slate-950"><i class="fa-brands fa-facebook"></i></div>
                     <div>
-                        <p class="text-[10px] font-black text-sky-700 uppercase tracking-wider">FACEBOOK PAGE</p>
-                        <p class="font-bold text-base text-slate-950 mt-1">ChaiPhu Channel <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-0.5"></i></p>
+                        <p class="text-xs font-black text-slate-400">FACEBOOK</p>
+                        <p class="font-bold text-slate-950">______________________</p>
+                    </div>
+                </a>
+
+                <a href="#" class="flex items-center gap-4 p-4 bg-[#FFFDF9] hover:bg-orange-100 rounded-xl border-[3px] border-slate-950 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] transition-all group">
+                    <div class="w-12 h-12 bg-gradient-to-tr from-amber-500 to-pink-500 text-white rounded-lg flex items-center justify-center text-2xl border-2 border-slate-950"><i class="fa-brands fa-instagram"></i></div>
+                    <div>
+                        <p class="text-xs font-black text-slate-400">INSTAGRAM</p>
+                        <p class="font-bold text-slate-950">______________________</p>
+                    </div>
+                </a>
+
+                <a href="#" class="flex items-center gap-4 p-4 bg-[#FFFDF9] hover:bg-slate-200 rounded-xl border-[3px] border-slate-950 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] transition-all group">
+                    <div class="w-12 h-12 bg-slate-950 text-white rounded-lg flex items-center justify-center text-2xl border-2 border-slate-950"><i class="fa-brands fa-github"></i></div>
+                    <div>
+                        <p class="text-xs font-black text-slate-400">GITHUB</p>
+                        <p class="font-bold text-slate-950">______________________</p>
                     </div>
                 </a>
 
@@ -289,12 +279,12 @@
     </section>
 
 
-    <!-- ================= POPUP MODAL (หน้าต่างขยายดูรูปผลงานใหญ่สะใจ) ================= -->
-    <div id="popup" class="fixed inset-0 bg-slate-950/80 hidden z-[100] flex-col items-center justify-center p-4 transition-all duration-200 opacity-0">
-        <button onclick="closeImage()" class="absolute top-6 right-6 text-slate-950 bg-white border-[3px] border-slate-950 text-2xl w-12 h-12 flex items-center justify-center font-black rounded-xl shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] transition-all">
+    <!-- ================= PREMIUM NEO-BRUTALIST IMAGE POPUP MODAL (ป๊อปอัปขยายรูปแบบมีขอบหนาคลุม) ================= -->
+    <div id="popup" class="fixed inset-0 bg-slate-950/70 hidden z-[100] flex-col items-center justify-center p-4 transition-all duration-200 opacity-0">
+        <button onclick="closeImage()" class="absolute top-6 right-6 text-slate-950 bg-white border-[3px] border-slate-950 text-2xl w-12 h-12 flex items-center justify-center font-black rounded-xl shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] transition-all">
             <i class="fa-solid fa-xmark"></i>
         </button>
-        <div class="max-w-3xl max-h-[80vh] overflow-hidden rounded-2xl border-[4px] border-slate-950 shadow-[10px_10px_0px_0px_#B2C9CA] bg-[#FFFDF9] p-2">
+        <div class="max-w-3xl max-h-[80vh] overflow-hidden rounded-2xl border-[4px] border-slate-950 shadow-[10px_10px_0px_0px_#FFFDF9] bg-[#FFFDF9] p-2">
             <img id="popup-img" class="w-full h-full object-contain max-h-[78vh] rounded-xl" src="" alt="Portfolio Expanded">
         </div>
     </div>
@@ -302,26 +292,12 @@
 
     <!-- ================= FOOTER ================= -->
     <footer class="bg-slate-950 text-[#FFFDF9] py-8 text-center text-sm font-bold border-t-[4px] border-slate-950">
-        © 2026 WSK Portfolio — ChaiPhu Wuttisak. All Rights Reserved.
+        ⚡ DESIGNED IN 2026 WITH NEO-BRUTALISM ENERGY. ALL RIGHTS RESERVED.
     </footer>
 
 
-    <!-- ================= JAVASCRIPT CONTROLLERS (ควบคุมตัวเปิด/ปิดหน้าต่างและตัวโหลด) ================= -->
+    <!-- ================= JAVASCRIPT FOR IMAGE POPUP MODAL ================= -->
     <script>
-        // 1. ควบคุมการทำปิดหน้าระบบโหลด (Loader) เมื่อเว็บโหลดข้อมูลเสร็จสิ้น
-        window.addEventListener('load', function() {
-            const loader = document.getElementById('loader');
-            setTimeout(() => {
-                loader.classList.add('opacity-0');
-                // ซ่อนตัวบล็อกแบบสมบูรณ์
-                setTimeout(() => {
-                    loader.style.display = 'none';
-                    document.body.classList.remove('no-scroll');
-                }, 500);
-            }, 800); // ดีเลย์สั้นๆ เพื่อความสวยงามลื่นไหล
-        });
-
-        // 2. ควบคุมระบบป๊อปอัปขยายรูปภาพโปรเจกต์ขนาดใหญ่
         function openImage(src) {
             const popup = document.getElementById('popup');
             const popupImg = document.getElementById('popup-img');
@@ -334,7 +310,7 @@
                 popup.classList.remove('opacity-0');
             }, 10);
 
-            document.body.classList.add('no-scroll');
+            document.body.classList.add('overflow-hidden');
         }
 
         function closeImage() {
@@ -346,10 +322,9 @@
                 popup.classList.add('hidden');
             }, 200);
 
-            document.body.classList.remove('no-scroll');
+            document.body.classList.remove('overflow-hidden');
         }
 
-        // คลิกพื้นที่ว่างสีดำเพื่อปิดหน้าต่างได้ทันที
         document.getElementById('popup').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeImage();
