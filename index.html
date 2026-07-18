@@ -1,180 +1,461 @@
-
-
-ข้ามไปที่เนื้อหา
-การใช้ อีเมลของ Krathumbaen Wisetsamutthakhun School กับโปรแกรมอ่านหน้าจอ
-เปิดการแจ้งเตือนในเดสก์ท็อปสำหรับ อีเมลของ Krathumbaen Wisetsamutthakhun School
-   ตกลง  ไม่ ขอบคุณ
-
-1 จาก 1,456
-ช่วยผมด้วยครับจารย์
-กล่องจดหมาย
-
-ณิรินทร์ญา อัครณธิพัฒน์
-20:57 (0 นาทีที่ผ่านมา)
-ถึง ฉัน
-
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natthida Ratsamee - Cozy Interactive Workspace</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Fredoka & Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+    <!-- FontAwesome สำหรับชุดไอคอนและสัญลักษณ์ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Fredoka', 'Kanit', sans-serif;
+            background-color: #FFF2F4;
+        }
+
+        /* 🌸 แอนิเมชันลอยเบาๆ แบบนิ่งสงบ */
+        @keyframes gentle-swing {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-6px) rotate(0.5deg); }
+        }
+        .animate-swing-calm {
+            animation: gentle-swing 8s infinite ease-in-out;
+        }
+
+        /* 🍮 แอนิเมชันปุ่มเด้งดึ๋งสไตล์เยลลี่ (Jelly Squish Animation) */
+        @keyframes jelly-pop {
+            0% { transform: scale(1, 1); }
+            30% { transform: scale(1.1, 0.9); }
+            40% { transform: scale(0.9, 1.1); }
+            50% { transform: scale(1.03, 0.97); }
+            65% { transform: scale(0.99, 1.01); }
+            100% { transform: scale(1, 1); }
+        }
+        .jelly-hover:hover {
+            animation: jelly-pop 0.5s ease-in-out;
+        }
+
+        /* 🎀 ปุ่ม 3D สเตตัสปกติ (สัมผัสแห่งความนูนเด่นน่าคลิก) */
+        .btn-3d-control {
+            position: relative;
+            transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        /* สเตตัสเมื่อ "ยังไม่ได้กดเลือก" (Inactive Tab) */
+        .btn-inactive {
+            background-color: #FFFFFF;
+            border: 2px solid #FFCAD4;
+            border-bottom: 6px solid #FFCAD4;
+            color: #94A3B8;
+            transform: translateY(0px);
+        }
+        .btn-inactive:hover {
+            transform: translateY(-4px);
+            border-bottom-width: 10px;
+            color: #F4978E;
+            background-color: #FFF9FA;
+        }
+        .btn-inactive:active {
+            transform: translateY(4px);
+            border-bottom-width: 2px;
+        }
+
+        /* สเตตัสเมื่อ "ถูกกดเลือกแล้ว" (Active Tab ยุบตัวลงแนบสนิท) */
+        .btn-active {
+            background-color: #FFF5F6;
+            border: 2px solid #F4978E;
+            border-bottom: 2px solid #F4978E;
+            color: #F4978E;
+            transform: translateY(4px);
+            box-shadow: inset 0 2px 4px rgba(244,151,142,0.1);
+        }
+
+        /* ✨ ปรับแต่ง Scrollbar สตรอว์เบอร์รีนม */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFF2F4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FFCAD4;
+            border-radius: 99px;
+            border: 2px solid #FFF2F4;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #F4978E;
+        }
+
+        .no-scroll {
+            overflow: hidden;
+        }
+    </style>
 </head>
 
-<body>
-
-<div class="bg"></div>
-
-<header>
-
-<nav>
-<h2>MyPortfolio</h2>
-
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#portfolio">Portfolio</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-</nav>
-
-<div class="hero">
-
-<div class="hero-text">
-
-<h1>Hello 👋</h1>
-
-<h3>Nirinya Akaranathiphat</h3>
-
-<p>Web Developer | Designer | Student</p>
-
-<a href="#portfolio" class="btn">
-View Portfolio
-</a>
-
-</div>
-
-<div class="hero-img">
-
-<img src="images/1.jpg">
-
-</div>
-
-</div>
-
-</header>
-
-<section id="about">
-
-<h2>About Me</h2>
-
-<p>
-<strong>ชื่อ :</strong> นางสาว ณิรินทร์ญา อัครณธีพัฒน์<br>
-<strong>โรงเรียน :</strong> กระทุ่มแบน "วิเศษสมุทคุณ"<br>
-<strong>สายการเรียน :</strong> วิทยาศาสตร์-คณิตศาสตร์
-</p>
- 
-
-
-
-
-</section>
-
-<section id="portfolio">
-
-<h2>My Projects</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<img src="images/2.jpg">
-
-<h3>Portfolio หน้า 1</h3>
- 
-<p>ปก</p>
-
-
-</div>
-
-<div class="card">
-
-<img src="images/3.jpg">
-
-<h3>Portfolio หน้า 2</h3>
-
-<p>Statement of purpose</p>
-
-</div>
-
-<div class="card">
-
-<img src="images/4.jpg">
-
-<h3>Portfolio หน้า 3</h3>
-
-<p>Profile</p>
-
-</div>
-
-  <div class="card">
-
-<img src="images/5.jpg">
-
-<h3>Portfolio หน้า 4</h3>
-
-<p>ผลงานด้านวิชาการ</p>
-
-</div>
-
-  <div class="card">
-
-<img src="images/6.jpg">
-
-<h3>Portfolio หน้า 5</h3>
-
-<p>ผลงานด้านจิตอาสา</p>
-
-</div>
-
-  <div class="card">
-
-<img src="images/7.jpg">
-
-<h3>Portfolio หน้า 6</h3>
-
-<p>กิจกรมมอื่นๆ</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>Email : 164380@wsk.ac.th</p>
-
-<p>Facebook : Nirinya Akaranathiphat</p>
-
-<p>GitHub : github.com/Nirinya37</p>
-
-</section>
-
-<footer>
-
-© 2026 Nirinya
-
-</footer>
-
-<script src="script.js"></script>
+<body class="text-[#4A3E3D] min-h-screen antialiased selection:bg-[#FFCAD4] selection:text-[#4A3E3D] overflow-x-hidden relative">
+
+    <!-- ☁️ แผ่นออร่าละมุนตาสามสีลอยนุ่มนวลด้านหลัง -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-[35rem] h-[35rem] bg-[#FFCAD4]/30 rounded-full blur-[100px] animate-swing-calm"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40rem] h-[40rem] bg-[#F4978E]/15 rounded-full blur-[120px] animate-swing-calm" style="animation-delay: -3s;"></div>
+        <div class="absolute top-[40%] right-[20%] w-[25rem] h-[25rem] bg-[#FFE5EC]/60 rounded-full blur-[80px] animate-swing-calm" style="animation-delay: -5s;"></div>
+    </div>
+
+    <!-- ================= TOP HUD STATUS BAR (แถบรายงานสถานะสไตล์โฮมเพจแท็บเล็ต) ================= -->
+    <div class="max-w-6xl mx-auto px-4 pt-6 relative z-10">
+        <div class="bg-white/80 backdrop-blur-md border-2 border-[#FFCAD4] rounded-[1.5rem] px-6 py-3 flex justify-between items-center shadow-sm">
+            <div class="text-xs md:text-sm font-bold tracking-wider flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>SYSTEM_CONNECTED // NATTHIDA.R</span>
+            </div>
+            <div class="flex items-center gap-4 text-[11px] font-bold text-[#F4978E] tracking-widest">
+                <span><i class="fa-solid fa-wifi animate-bounce"></i> 100% SIGNAL</span>
+                <span><i class="fa-solid fa-heart animate-pulse"></i> LOVE_MODE</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= MAIN COLLABORATIVE WORKSPACE ================= -->
+    <main class="max-w-6xl mx-auto px-4 py-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- ================= LEFT COLUMN: COZY PROFILE WIDGET ================= -->
+        <section class="lg:col-span-4 bg-white/90 border-4 border-[#FFCAD4] rounded-[2.5rem] p-6 shadow-xl relative overflow-hidden flex flex-col justify-between">
+            <div class="absolute top-2 right-4 text-3xl opacity-20">🌸</div>
+            
+            <div class="space-y-6">
+                <!-- กรอบรูปถ่ายสติกเกอร์เก๋ๆ -->
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -inset-1.5 bg-gradient-to-tr from-[#F4978E] to-[#FFCAD4] rounded-[2rem] opacity-30 blur-sm"></div>
+                        <div class="relative w-48 h-48 bg-white border-4 border-[#FFCAD4] p-2 rounded-[2rem] shadow-md">
+                            <img src="images/profile.jpg" alt="Natthida" class="w-full h-full object-cover rounded-[1.5rem]" onerror="this.src='https://placehold.co/400x400/ffe5ec/4a3e3d?text=Natthida'">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- รายละเอียดสเตตัสจำลอง -->
+                <div class="text-center space-y-2">
+                    <span class="bg-[#FFCAD4]/40 text-[#F4978E] border border-[#FFCAD4] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">CREATIVE_STUDENT</span>
+                    <h2 class="text-2xl font-black text-[#4A3E3D] mt-1">ณัฐธิดา รัศมี</h2>
+                    <p class="text-xs font-semibold text-slate-400">Class : Portfolio 2026 // Active</p>
+                </div>
+
+                <!-- แถบค่าสถานะดุ๊กดิ๊กสุดน่ารัก (Interactive Progress) -->
+                <div class="space-y-3 bg-[#FFF5F6] p-4 rounded-2xl border border-[#FFCAD4]/40">
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-[10px] font-bold text-slate-500">
+                            <span>🧁 HAPPINESS LEVEL</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="w-full h-2 bg-[#FFCAD4]/30 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-[#F4978E] to-[#FFCAD4] w-full rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-[10px] font-bold text-slate-500">
+                            <span>🎨 CREATIVITY</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="w-full h-2 bg-[#FFCAD4]/30 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-[#F4978E] to-[#FFCAD4] w-[95%] rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="flex justify-between text-[10px] font-bold text-slate-500">
+                            <span>☕ COFFEE INTAKE</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="w-full h-2 bg-[#FFCAD4]/30 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-[#F4978E] to-[#FFCAD4] w-[80%] rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-dashed border-[#FFCAD4] flex justify-between items-center text-[9px] text-slate-400 font-bold tracking-widest">
+                <span>LV.99 COMPLETED</span>
+                <span class="text-[#F4978E]">NATTHIDA_WORLD 🌸</span>
+            </div>
+        </section>
+
+        <!-- ================= RIGHT COLUMN: INTERACTIVE FILE PLANNER ================= -->
+        <section class="lg:col-span-8 space-y-6">
+            
+            <!-- หูแฟ้มควบคุมระดับหัวข้อ (Tab Navigation Controls with Satisfying 3D Tactile Buttons) -->
+            <nav class="flex flex-wrap gap-2 md:gap-4 border-b-4 border-[#FFCAD4] pb-0.5">
+                <button onclick="switchTab('about')" id="tab-about" class="tab-btn btn-3d-control btn-active jelly-hover flex items-center gap-1.5 px-6 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
+                    <i class="fa-solid fa-address-card text-sm"></i> Bio
+                </button>
+                <button onclick="switchTab('education')" id="tab-education" class="tab-btn btn-3d-control btn-inactive jelly-hover flex items-center gap-1.5 px-6 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
+                    <i class="fa-solid fa-graduation-cap text-sm"></i> Education
+                </button>
+                <button onclick="switchTab('portfolio')" id="tab-portfolio" class="tab-btn btn-3d-control btn-inactive jelly-hover flex items-center gap-1.5 px-6 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
+                    <i class="fa-solid fa-images text-sm"></i> Gallery
+                </button>
+                <button onclick="switchTab('contact')" id="tab-contact" class="tab-btn btn-3d-control btn-inactive jelly-hover flex items-center gap-1.5 px-6 py-3 rounded-t-[1.2rem] font-bold text-xs md:text-sm tracking-wider uppercase">
+                    <i class="fa-solid fa-envelope text-sm"></i> Contact
+                </button>
+            </nav>
+
+            <!-- แผงบรรจุหน้าต่างแฟ้มเอกสาร (Tabbed Content Sheets) -->
+            <div class="bg-white/95 border-4 border-[#FFCAD4] rounded-b-[2.5rem] rounded-tr-[2.5rem] p-6 md:p-8 shadow-xl min-h-[460px] relative">
+                
+                <!-- 📁 SHEET 1: ABOUT & GOALS -->
+                <div id="content-about" class="tab-content space-y-6">
+                    <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
+                        <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-circle-user"></i></span>
+                        <h3 class="text-xl font-black text-[#4A3E3D]">ข้อมูลแนะนำตัว</h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- รายละเอียดประวัติ -->
+                        <div class="bg-white border-2 border-[#FFCAD4]/60 p-5 rounded-[2rem] space-y-4 shadow-sm relative overflow-hidden">
+                            <div class="absolute top-2 right-4 text-slate-100"><i class="fa-solid fa-quote-right text-3xl"></i></div>
+                            <h4 class="font-extrabold text-[#F4978E] flex items-center gap-1.5"><span class="text-xs">🍬</span> ข้อมูลส่วนตัว</h4>
+                            <div class="space-y-3.5 text-sm font-semibold text-[#4A3E3D]/80">
+                                <p class="flex items-center gap-2 border-b border-[#FFF0F2] pb-1.5">🧁 ชื่อ : <span>ณัฐธิดา รัศมี</span></p>
+                                <p class="flex items-center gap-2 border-b border-[#FFF0F2] pb-1.5">🏫 โรงเรียน : <span>[ กรอกชื่อโรงเรียนที่นี่ ]</span></p>
+                                <p class="flex items-center gap-2 border-b border-[#FFF0F2] pb-1.5">📐 แผนการเรียน : <span>[ กรอกแผนการเรียนที่นี่ ]</span></p>
+                            </div>
+                        </div>
+
+                        <!-- บล็อกเขียนเป้าหมาย (Sticky Note Yellow Concept) -->
+                        <div class="bg-amber-50/50 border-2 border-amber-200/50 p-5 rounded-[2rem] space-y-4 shadow-sm relative">
+                            <div class="absolute top-2 right-4 text-amber-200"><i class="fa-solid fa-thumbtack text-lg"></i></div>
+                            <h4 class="font-extrabold text-amber-500 flex items-center gap-1.5"><span class="text-xs">🎯</span> เป้าหมายในการศึกษาต่อ</h4>
+                            <p class="text-sm font-semibold text-slate-600 leading-relaxed min-h-[80px] bg-[linear-gradient(#FFF0F2_1px,transparent_1px)] bg-[size:100%_2rem] pt-1">
+                                [ พิมพ์เป้าหมาย ความปรารถนา หรือปณิธานของคุณลงตรงช่องนี้ ]
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- แถบเขียนข้อความเกริ่นนำ -->
+                    <div class="bg-[#FFF5F6] border border-[#FFCAD4]/60 p-5 rounded-[1.8rem] text-sm font-semibold leading-relaxed text-slate-500 shadow-inner">
+                        <p>เว้นข้อความไว้ให้กรอกเอง (คุณสามารถใส่บทความแนะนำสั้นๆ ที่นี่ได้เพื่อเปิดโอกาสให้นักประเมินเข้าใจตัวตนของคุณณัฐธิดาได้อย่างเป็นระบบ)</p>
+                    </div>
+                </div>
+
+                <!-- 📁 SHEET 2: EDUCATION TIMELINE -->
+                <div id="content-education" class="tab-content space-y-6 hidden">
+                    <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
+                        <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-school"></i></span>
+                        <h3 class="text-xl font-black text-[#4A3E3D]">ประวัติการศึกษา (Education Path)</h3>
+                    </div>
+
+                    <!-- ไทม์ไลน์โบว์ริบบิ้นแบบนิ่งๆ สวยงาม -->
+                    <div class="relative border-l-4 border-dashed border-[#FFCAD4] ml-6 md:ml-36 space-y-8 py-2">
+                        <!-- ม.ปลาย -->
+                        <div class="relative pl-8 group">
+                            <span class="absolute -left-[16px] -top-1 z-20 text-2xl animate-bounce">🌸</span>
+                            <div class="absolute left-[-135px] top-1 hidden md:block w-24 text-right">
+                                <span class="text-[10px] bg-[#FFCAD4]/60 text-[#F4978E] font-extrabold px-2.5 py-1 rounded-full tracking-wider border border-[#FFCAD4]">HIGH_SCH</span>
+                            </div>
+                            <div class="bg-[#FFF5F6] border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] shadow-sm">
+                                <h4 class="font-extrabold text-base text-[#F4978E]">ระดับมัธยมศึกษาตอนปลาย</h4>
+                                <p class="text-xs text-slate-500 font-semibold mt-1">[ ระบุชื่อโรงเรียน / ปีการศึกษา ]</p>
+                            </div>
+                        </div>
+
+                        <!-- ม.ต้น -->
+                        <div class="relative pl-8 group">
+                            <span class="absolute -left-[16px] -top-1 z-20 text-2xl">🎀</span>
+                            <div class="absolute left-[-135px] top-1 hidden md:block w-24 text-right">
+                                <span class="text-[10px] bg-[#B5E2FA]/50 text-sky-500 font-extrabold px-2.5 py-1 rounded-full tracking-wider border border-[#B5E2FA]/60">MIDDLE</span>
+                            </div>
+                            <div class="bg-white border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] shadow-sm">
+                                <h4 class="font-extrabold text-base text-[#4A3E3D]">ระดับมัธยมศึกษาตอนต้น</h4>
+                                <p class="text-xs text-slate-500 font-semibold mt-1">[ ระบุชื่อโรงเรียน / ปีการศึกษา ]</p>
+                            </div>
+                        </div>
+
+                        <!-- ประถม -->
+                        <div class="relative pl-8 group">
+                            <span class="absolute -left-[16px] -top-1 z-20 text-2xl">🧸</span>
+                            <div class="absolute left-[-135px] top-1 hidden md:block w-24 text-right">
+                                <span class="text-[10px] bg-[#FFD166]/30 text-amber-500 font-extrabold px-2.5 py-1 rounded-full tracking-wider border border-[#FFD166]/50">PRIMARY</span>
+                            </div>
+                            <div class="bg-white border-2 border-[#FFCAD4] p-4 rounded-[1.8rem] shadow-sm">
+                                <h4 class="font-extrabold text-base text-[#4A3E3D]">ระดับประถมศึกษา</h4>
+                                <p class="text-xs text-slate-500 font-semibold mt-1">[ ระบุชื่อโรงเรียน / ปีการศึกษา ]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 📁 SHEET 3: PORTFOLIO ALBUM (โพลารอยด์แสดงครบถ้วน 11 หน้าพร้อมปุ่มโพลารอยด์น่ากดส่อง) -->
+                <div id="content-portfolio" class="tab-content space-y-6 hidden">
+                    <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
+                        <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-photo-film"></i></span>
+                        <h3 class="text-xl font-black text-[#4A3E3D]">แกลเลอรีรูปภาพผลงาน (11 หน้า)</h3>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 max-h-[420px] overflow-y-auto pr-2 pb-2">
+                        <script>
+                            for (let i = 1; i <= 11; i++) {
+                                document.write(`
+                                    <div class="group bg-white border-2 border-[#FFCAD4] p-2.5 rounded-[1.2rem] shadow-sm hover:shadow-md hover:border-[#F4978E] hover:-translate-y-1.5 transition-all duration-300 cursor-pointer relative" onclick="openLightbox('images/page${i}.jpg')">
+                                        <div class="aspect-[3/4] bg-slate-50 rounded-lg overflow-hidden relative border border-slate-100">
+                                            <img src="images/page${i}.jpg" alt="Portfolio Page ${i}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.src='https://placehold.co/300x400/ffe5ec/4a3e3d?text=Page+${i}'">
+                                            <!-- ปุ่มสแกนขยายใหญ่สไตล์ลูกกวาดน่ากด -->
+                                            <div class="absolute inset-0 bg-[#4A3E3D]/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                                <span class="jelly-hover text-xs font-bold bg-[#F4978E] text-white border-2 border-white px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1 transform scale-90 group-hover:scale-100 transition-all duration-200"><i class="fa-solid fa-magnifying-glass-plus"></i> VIEW</span>
+                                            </div>
+                                        </div>
+                                        <p class="mt-2 text-center font-bold text-[9px] text-slate-400 group-hover:text-[#F4978E] transition-colors">PAGE_${i.toString().padStart(2, '0')}</p>
+                                    </div>
+                                `);
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- 📁 SHEET 4: CONTACT DESK -->
+                <div id="content-contact" class="tab-content space-y-6 hidden">
+                    <div class="flex items-center gap-3 border-b border-[#FFF0F2] pb-4">
+                        <span class="w-8 h-8 rounded-full bg-[#FFCAD4]/40 flex items-center justify-center text-sm text-[#F4978E]"><i class="fa-solid fa-paper-plane"></i></span>
+                        <h3 class="text-xl font-black text-[#4A3E3D]">ช่องทางการติดต่อ (Contact Channel)</h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Email -->
+                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border-2 border-[#FFCAD4] hover:border-[#F4978E] transition-all hover:scale-[1.02] hover:-translate-y-0.5 shadow-sm">
+                            <div class="w-10 h-10 bg-[#FFCAD4]/30 text-[#F4978E] rounded-full flex items-center justify-center text-lg shadow-inner"><i class="fa-solid fa-envelope animate-pulse"></i></div>
+                            <div class="overflow-hidden">
+                                <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">EMAIL</span>
+                                <span class="text-xs font-bold text-[#4A3E3D] block truncate">Email : __________________</span>
+                            </div>
+                        </div>
+
+                        <!-- Facebook -->
+                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border-2 border-[#FFCAD4] hover:border-[#F4978E] transition-all hover:scale-[1.02] hover:-translate-y-0.5 shadow-sm">
+                            <div class="w-10 h-10 bg-blue-100 text-blue-400 rounded-full flex items-center justify-center text-lg shadow-inner"><i class="fa-brands fa-facebook-f"></i></div>
+                            <div class="overflow-hidden">
+                                <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">FACEBOOK</span>
+                                <span class="text-xs font-bold text-[#4A3E3D] block truncate">Facebook : __________________</span>
+                            </div>
+                        </div>
+
+                        <!-- Instagram -->
+                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border-2 border-[#FFCAD4] hover:border-[#F4978E] transition-all hover:scale-[1.02] hover:-translate-y-0.5 shadow-sm">
+                            <div class="w-10 h-10 bg-pink-100 text-pink-400 rounded-full flex items-center justify-center text-lg shadow-inner"><i class="fa-brands fa-instagram"></i></div>
+                            <div class="overflow-hidden">
+                                <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">INSTAGRAM</span>
+                                <span class="text-xs font-bold text-[#4A3E3D] block truncate">Instagram : __________________</span>
+                            </div>
+                        </div>
+
+                        <!-- GitHub -->
+                        <div class="flex items-center gap-4 p-4 bg-[#FFF5F6] rounded-2xl border-2 border-[#FFCAD4] hover:border-[#F4978E] transition-all hover:scale-[1.02] hover:-translate-y-0.5 shadow-sm">
+                            <div class="w-10 h-10 bg-slate-100 text-slate-500 rounded-full flex items-center justify-center text-lg shadow-inner"><i class="fa-brands fa-github"></i></div>
+                            <div class="overflow-hidden">
+                                <span class="text-[9px] text-[#F4978E] font-bold block tracking-wider">GITHUB</span>
+                                <span class="text-xs font-bold text-[#4A3E3D] block truncate">GitHub : __________________</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= PREMIUM LIGHTBOX POPUP SYSTEM ================= -->
+    <div id="lightbox" class="fixed inset-0 bg-[#4A3E3D]/70 backdrop-blur-sm hidden z-[100] flex-col items-center justify-center p-4 transition-all duration-300 opacity-0">
+        <!-- ปุ่มปิดกล่องขยายสไตล์วุ้นเด้งเร้าใจ น่ากดสิบเท่า -->
+        <button onclick="closeLightbox()" class="jelly-hover absolute top-6 right-6 text-[#4A3E3D] bg-white border-4 border-[#FFCAD4] text-xl w-12 h-12 flex items-center justify-center rounded-full shadow-xl hover:text-[#F4978E] hover:border-[#F4978E] hover:-translate-y-1 active:translate-y-0 transition-all">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-3xl max-h-[85vh] overflow-hidden rounded-[2.5rem] border-4 border-[#FFCAD4] bg-white p-2 shadow-2xl animate-swing-calm">
+            <img id="lightbox-img" class="w-full h-full object-contain max-h-[82vh] rounded-[2rem]" src="" alt="Expanded Blueprint View">
+        </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-white/40 backdrop-blur-md text-slate-400 py-6 text-center text-[10px] tracking-widest border-t border-[#FFCAD4]/60 relative z-10">
+        © 2026 NATTHIDA COZY DESK SYSTEM. ALL RIGHTS RESERVED.
+    </footer>
+
+    <!-- ================= JAVASCRIPT LOGIC CONTROLLERS ================= -->
+    <script>
+        // 1. ฟังก์ชันสลับการแสดงผลแผ่นเอกสารแฟ้ม (Tab Switcher with 3D tactile animation class toggling)
+        function switchTab(tabId) {
+            // ซ่อนทุกๆ Content Sheet
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // คืนค่าปุ่มกดทั้งหมดให้กลับไปเป็นสถานะลอยเด้ง (Inactive 3D Tab styling)
+            const tabs = document.querySelectorAll('.tab-btn');
+            tabs.forEach(tab => {
+                tab.classList.remove('btn-active');
+                tab.classList.add('btn-inactive');
+            });
+
+            // แสดงเฉพาะ Content Sheet ที่เลือก
+            document.getElementById(`content-${tabId}`).classList.remove('hidden');
+
+            // เปลี่ยนปุ่มที่กดเลือกให้ยุบตัวลงไปสนิทแบบสวยงามและสมจริง (Active 3D Tab styling)
+            const activeTab = document.getElementById(`tab-${tabId}`);
+            activeTab.classList.remove('btn-inactive');
+            activeTab.classList.add('btn-active');
+        }
+
+        // 2. แผงควบคุมระบบ Lightbox ส่องรูปภาพขยายใหญ่
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            lightboxImg.src = src;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+            }, 10);
+
+            document.body.classList.add('no-scroll');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('opacity-0');
+            
+            setTimeout(() => {
+                lightbox.classList.remove('flex');
+                lightbox.classList.add('hidden');
+            }, 200);
+
+            document.body.classList.remove('no-scroll');
+        }
+
+        // หากคลิกพื้นที่ด้านนอกรูปภาพจะปิดหน้าต่างทันที
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // สามารถกดปุ่ม Escape บนคีย์บอร์ดเพื่อปิดป๊อปอัปได้
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
 
 </body>
 </html>
