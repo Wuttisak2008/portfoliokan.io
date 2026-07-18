@@ -1,1 +1,246 @@
+ไม่มีรายการที่เลือก 
+
+ข้ามไปที่เนื้อหา
+การใช้ อีเมลของ Krathumbaen Wisetsamutthakhun School กับโปรแกรมอ่านหน้าจอ
+เปิดการแจ้งเตือนในเดสก์ท็อปสำหรับ อีเมลของ Krathumbaen Wisetsamutthakhun School
+   ตกลง  ไม่ ขอบคุณ
+
+1 จาก 1,458
+css
+กล่องจดหมาย
+
+ณิรินทร์ญา อัครณธิพัฒน์
+21:03 (1 นาทีที่ผ่านมา)
+ถึง ฉัน
+
+ดูเหมือนว่าข้อความนี้จะเป็นอังกฤษ
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:linear-gradient(135deg,#ffe8f4,#dff5ff);
+
+overflow-x:hidden;
+
+color:#444;
+
+}
+
+.bg{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+background:
+
+radial-gradient(circle at 20% 20%,#ffd5ec 0%,transparent 30%),
+
+radial-gradient(circle at 80% 40%,#d6f0ff 0%,transparent 30%),
+
+radial-gradient(circle at 50% 90%,#fff7c9 0%,transparent 25%);
+
+z-index:-1;
+
+}
+
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:25px 10%;
+
+align-items:center;
+
+}
+
+nav h2{
+
+color:#ff6ea8;
+
+font-size:30px;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:30px;
+
+list-style:none;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:#555;
+
+font-weight:500;
+
+}
+
+.hero{
+
+display:flex;
+
+justify-content:space-around;
+
+align-items:center;
+
+padding:80px 10%;
+
+flex-wrap:wrap;
+
+}
+
+.hero-text h1{
+
+font-size:60px;
+
+color:#ff66aa;
+
+}
+
+.hero-text h3{
+
+font-size:36px;
+
+margin:15px 0;
+
+}
+
+.hero-text p{
+
+font-size:20px;
+
+margin-bottom:30px;
+
+}
+
+.btn{
+
+padding:15px 35px;
+
+border-radius:50px;
+
+background:linear-gradient(45deg,#ff8fc5,#7bdcff);
+
+text-decoration:none;
+
+color:white;
+
+font-weight:bold;
+
+transition:.3s;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+}
+
+.hero-img img{
+
+width:330px;
+
+height:330px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:8px solid white;
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+section{
+
+padding:90px 10%;
+
+}
+
+section h2{
+
+font-size:40px;
+
+margin-bottom:40px;
+
+text-align:center;
+
+color:#ff69b4;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+
+border-radius:25px;
+
+padding:20px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card img{
+
+width:100%;
+
+border-radius:20px;
+
+height:200px;
+
+object-fit:cover;
+
+margin-bottom:15px;
+
+}
+
+footer{
+
+text-align:center;
+
+padding:30px;
+
+color:#666;
+
+}
 
